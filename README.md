@@ -8,7 +8,7 @@ app_file: inference.py
 pinned: false
 ---
 
-# 🚀 Smart Delivery Optimization Environment (Advanced)
+# 🚀 Smart Delivery Optimization Environment
 
 ## 🧠 Overview
 

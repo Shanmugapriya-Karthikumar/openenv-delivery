@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [project]
 name = "openenv-delivery"
 version = "0.1.0"
@@ -12,3 +13,23 @@ dependencies = [
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+=======
+[project]
+name = "openenv-delivery"
+version = "0.1.0"
+description = "AI delivery optimization environment using OpenEnv"
+authors = [{name = "Shanmugapriya"}]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "openai",
+    "openenv-core>=0.2.0"
+]
+
+[project.scripts]
+server = "server.app:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+>>>>>>> f2c54b1a70784d5e9c91d106ae7c911ae67f2473
