@@ -6,8 +6,12 @@ authors = [{name = "Shanmugapriya"}]
 dependencies = [
     "fastapi",
     "uvicorn",
-    "openai"
+    "openai",
+    "openenv-core>=0.2.0"
 ]
+
+[project.scripts]
+server = "app:app"
 
 [build-system]
 requires = ["setuptools"]
