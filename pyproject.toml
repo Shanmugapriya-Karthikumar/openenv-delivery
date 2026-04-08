@@ -1,0 +1,14 @@
+[project]
+name = "openenv-delivery"
+version = "0.1.0"
+description = "AI delivery optimization environment using OpenEnv"
+authors = [{name = "Shanmugapriya"}]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "openai"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

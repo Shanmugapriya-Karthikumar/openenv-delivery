@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.api_route("/reset", methods=["GET", "POST"])
+@app.post("/reset")
 def reset():
     return {"status": "ok"}
 
