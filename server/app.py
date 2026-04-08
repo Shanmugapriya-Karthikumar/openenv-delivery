@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 
 app = FastAPI()
 
@@ -9,3 +10,11 @@ def reset():
 @app.get("/")
 def root():
     return {"status": "running"}
+
+
+def main():
+    uvicorn.run(app, host="0.0.0.0", port=7860)
+
+
+if __name__ == "__main__":
+    main()
