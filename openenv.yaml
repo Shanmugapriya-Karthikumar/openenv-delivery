@@ -1,0 +1,64 @@
+name: smart-delivery-env-advanced
+
+description: >
+  A multi-order delivery optimization environment where an agent must
+  make decisions under time, energy, and traffic constraints.
+
+version: 1.0
+
+entrypoint: inference.py
+
+environment:
+  stochastic: true
+  constraints:
+    - time_limit
+    - energy_limit
+    - traffic_delay
+
+state:
+  type: object
+  properties:
+    location:
+      type: string
+    orders:
+      type: array
+    current_order:
+      type: object
+    time:
+      type: integer
+    energy:
+      type: integer
+    traffic:
+      type: boolean
+
+actions:
+  type: array
+  items:
+    - go_to_restaurant
+    - go_to_customer
+    - pick_order
+    - deliver
+    - select_order_1
+    - select_order_2
+
+tasks:
+  - name: easy
+    description: Optimal execution of multiple deliveries
+
+  - name: medium
+    description: Inefficient path with recovery
+
+  - name: hard
+    description: Incorrect actions requiring correction
+
+evaluation:
+  metrics:
+    - reward
+    - efficiency
+  reward_range:
+    min: 0.0
+    max: 1.0
+
+inference:
+  script: inference.py
+  runtime_limit: 1200  # seconds (20 minutes)
