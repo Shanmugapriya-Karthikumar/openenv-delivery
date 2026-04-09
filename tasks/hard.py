@@ -1,29 +1,28 @@
 from env import DeliveryEnv
 
 def run():
-    env = DeliveryEnv()
-    state = env.reset()
+    try:
+        env = DeliveryEnv()
+        state = env.reset()
 
-    actions = [
-        "deliver",  # wrong start
-        "select_order_1",
-        "go_to_restaurant",
-        "pick_order",
-        "go_to_customer",
-        "deliver"
-    ]
+        actions = [
+            "deliver",  # wrong
+            "select_order_1",
+            "go_to_restaurant",
+            "pick_order",
+            "go_to_customer",
+            "deliver"
+        ]
 
-    total_reward = 0
+        total_reward = 0
 
-    for action in actions:
-        state, reward, done = env.step(action)
-        total_reward += reward
+        for action in actions:
+            state, reward, done = env.step(action)
+            total_reward += reward
+            if done:
+                break
 
-        if done:
-            break
+        return total_reward
 
-<<<<<<< HEAD
-    return total_reward
-=======
-    return total_reward
->>>>>>> 2925d43aea7be8369bf185b27be6fb870e766a66
+    except Exception:
+        return 0
