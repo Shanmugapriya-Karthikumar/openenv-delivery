@@ -5,8 +5,8 @@ def run():
     state = env.reset()
 
     actions = [
-        "deliver",
-        "go_to_customer",
+        "deliver",  # wrong start
+        "select_order_1",
         "go_to_restaurant",
         "pick_order",
         "go_to_customer",
@@ -18,5 +18,8 @@ def run():
     for action in actions:
         state, reward, done = env.step(action)
         total_reward += reward
+
+        if done:
+            break
 
     return total_reward
