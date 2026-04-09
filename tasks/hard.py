@@ -22,4 +22,8 @@ def run():
         if done:
             break
 
+<<<<<<< HEAD
     return total_reward
+=======
+    return total_reward
+>>>>>>> 2925d43aea7be8369bf185b27be6fb870e766a66
