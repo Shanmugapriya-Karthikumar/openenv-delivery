@@ -9,16 +9,16 @@ tasks:
     description: Easy delivery task
     grader:
       module: tasks.easy
-      function: run
+      function: grader
 
   - id: medium
     description: Medium delivery task
     grader:
       module: tasks.medium
-      function: run
+      function: grader
 
   - id: hard
     description: Hard delivery task
     grader:
       module: tasks.hard
-      function: run
+      function: grader
