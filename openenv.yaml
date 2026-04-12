@@ -5,17 +5,20 @@ env:
   class: DeliveryEnv
 
 tasks:
-  - name: easy
+  - id: easy
+    description: Easy delivery task
     grader:
       module: tasks.easy
       function: run
 
-  - name: medium
+  - id: medium
+    description: Medium delivery task
     grader:
       module: tasks.medium
       function: run
 
-  - name: hard
+  - id: hard
+    description: Hard delivery task
     grader:
       module: tasks.hard
       function: run
