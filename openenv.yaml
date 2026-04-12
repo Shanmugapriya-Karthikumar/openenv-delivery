@@ -3,16 +3,16 @@ tasks:
     description: Easy delivery
     grader:
       type: python
-      path: tasks/easy.py
+      path: grader/easy.py
 
   - id: medium
     description: Medium delivery
     grader:
       type: python
-      path: tasks/medium.py
+      path: grader/medium.py
 
   - id: hard
     description: Hard delivery
     grader:
       type: python
-      path: tasks/hard.py
+      path: grader/hard.py
