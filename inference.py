@@ -1,7 +1,7 @@
 import os
-from tasks.easy import grader as easy
-from tasks.medium import grader as medium
-from tasks.hard import grader as hard
+from tasks.easy import run as easy
+from tasks.medium import run as medium
+from tasks.hard import run as hard
 from openai import OpenAI
 
 # ENV VARIABLES
