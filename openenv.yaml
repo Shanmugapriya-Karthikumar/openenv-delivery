@@ -1,24 +1,18 @@
-id: openenv-delivery
-
-env:
-  module: env
-  class: DeliveryEnv
-
 tasks:
   - id: easy
-    description: Easy delivery task
+    description: Deliver one order
     grader:
-      module: tasks.easy
-      function: grader
+      type: python
+      path: graders/easy.py
 
   - id: medium
-    description: Medium delivery task
+    description: Deliver two orders
     grader:
-      module: tasks.medium
-      function: grader
+      type: python
+      path: graders/medium.py
 
   - id: hard
-    description: Hard delivery task
+    description: Deliver multiple orders
     grader:
-      module: tasks.hard
-      function: grader
+      type: python
+      path: graders/hard.py
