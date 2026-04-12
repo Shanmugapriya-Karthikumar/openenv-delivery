@@ -1,18 +1,18 @@
 tasks:
   - id: easy
-    description: Deliver one order
+    description: Easy delivery
     grader:
       type: python
-      path: graders/easy.py
+      path: grader/evaluator.py
 
   - id: medium
-    description: Deliver two orders
+    description: Medium delivery
     grader:
       type: python
-      path: graders/medium.py
+      path: grader/evaluator.py
 
   - id: hard
-    description: Deliver multiple orders
+    description: Hard delivery
     grader:
       type: python
-      path: graders/hard.py
+      path: grader/evaluator.py
